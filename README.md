@@ -1,12 +1,12 @@
-# React + Vite
+#Контрольные вопросы
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1) Как использовать useState для управления состоянием?
+useState — это хук в React, который позволяет добавлять состояние в функциональные компоненты. Для использования нужно передать начальное значение состояния и функцию для его обновления. 
 
-Currently, two official plugins are available:
+2) Как работает useEffect?
+useEffect? useEffect — это хук, который позволяет выполнять побочные эффекты в функциональных компонентах. Он принимает два аргумента:
+Фукцию, которая будет выполнена после рендера.
+Массив зависимостей, в котором указываются переменные, изменения которых должны запускать эффект (если массив пустой, эффект выполнится только один раз, как componentDidMount).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3) С помощью какого метода можно рендерить списки элементов в React?
+Для рендеринга списков элементов в React используется метод map. Этот метод перебирает массив и возвращает новый массив JSX-элементов.
