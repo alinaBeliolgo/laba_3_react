@@ -1,3 +1,92 @@
+# README: Интернет-магазин "Пиццерия"
+
+## Описание проекта  
+Веб-приложение интернет-магазина пиццы на **React**. Позволяет пользователям просматривать меню, искать пиццы и выбирать размер.
+
+## Запуск проекта  
+1. Установите зависимости:  
+   ```
+   npm install
+   ```
+2. Запустите проект:  
+   ```
+   npm run dev
+   ```
+Приложение откроется на **http://localhost:5173/**.
+
+---
+
+##  Основные компоненты  
+
+###  `PizzaList.js` – Список пицц  
+Загружает данные, фильтрует по поиску.  
+```jsx
+const [pizzas, setPizzas] = useState([]);
+useEffect(() => setPizzas(pizzaData), []);
+
+const handleSearch = (query) => {
+  setFilteredPizzas(pizzas.filter(pizza =>
+    pizza.name.toLowerCase().includes(query.toLowerCase())
+  ));
+};
+```
+
+---
+
+###  `PizzaCard.js` – Карточка пиццы  
+Выбор размера, добавление в корзину.  
+```jsx
+const [selectedSize, setSelectedSize] = useState(pizza.sizes[0]);
+
+<button onClick={() => setSelectedSize(size)}>
+  {size} см.
+</button>;
+<button className={styles.addToCartButton}>Добавить в корзину</button>;
+```
+
+---
+
+###  `Slider.js` – Слайдер  
+Автоматически перелистывает изображения.  
+```jsx
+const [currentSlide, setCurrentSlide] = useState(0);
+useEffect(() => {
+  const interval = setInterval(() => setCurrentSlide(prev => (prev + 1) % slides.length), 3000);
+  return () => clearInterval(interval);
+}, []);
+```
+
+---
+
+###  `Search.js` – Поиск  
+Фильтрует список пицц по названию.  
+```jsx
+<input type="text" placeholder="Поиск..." onChange={(e) => onSearch(e.target.value)} />
+```
+
+---
+
+###  `Header.js` – Навигация  
+Простое меню.  
+```jsx
+<nav>
+  <a href="#">Меню</a> | <a href="#">О нас</a> | <a href="#">Контакты</a>
+</nav>;
+```
+
+---
+
+###  `Footer.js` – Футер  
+Содержит ссылку на репозиторий.  
+```jsx
+<a href="https://github.com/alinaBeliolgo/laba_3_react.git">Репозиторий</a>
+```
+
+---
+
+
+
+
 # Контрольные вопросы
 
 # Основные концепции React: useState, useEffect и рендеринг списков
