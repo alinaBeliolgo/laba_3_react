@@ -1,0 +1,16 @@
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    max-width: 50px;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
